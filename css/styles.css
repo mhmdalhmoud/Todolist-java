@@ -1,0 +1,67 @@
+/* Custom styles for Todo App */
+
+/* Add smooth transitions */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b6b6b6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b8b8b;
+}
+
+/* Make sure the footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Task hover effect */
+#tasks-container li {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#tasks-container li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed task styles */
+input[type="checkbox"]:checked + div span.task-text {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+/* Ensure proper styling for the date input */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+}
+
+/* Ensure inputs are properly visible */
+input, select, button {
+    font-family: inherit;
+    font-size: inherit;
+}
